@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/account.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="account.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="logo d-flex justify-content-center">
+        <img src="https://www.filimo.com/assets/web/ui/img-f6hSNhpyAYTawoyZ8Lpng/api/theme/logo/filimo/filimo_logo_type_fa.svg"
+            alt="">
+        <img src="https://www.filimo.com/assets/web/ui/img-f6hSNhpyAYTawoyZ8Lpng/api/theme/logo/filimo/filimo_logo.svg"
+            alt="">
+    </div>
+    <div class="main d-flex flex-column gap-3 text-center ">
+        <div class="go-back d-flex justify-content-end align-items-center ">
+            <a class="px-3 rounded-1 d-flex justify-content-between align-items-center gap-2" href="index.html">
+                <span>بازگشت</span>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <section class="d-flex flex-column gap-2 position-relative py-4 px-3">
+            <div class="d-md-flex flex-md-row-reverse justify-content-between py-md-2">
+                <p>اگر در فیلیمو حساب کاربری ندارید، ثبت نام کنید:</p>
+                <button class="btn d-block w-100 m-auto m-md-0 py-2 d-md-inline-block">ایجاد حساب کاربری</button>
+            </div>
+            <hr class="bg-secondary">
+            <form class="py-md-3">
+                <p class="text-end">اگر در فیلیمو حساب کاربری دارید، وارد شوید:</p>
+                <div class="flex-column flex-md-row-reverse d-flex justify-content-md-center align-items-md-center">
+                    <div class="w-100 rounded-1">
+                        <a href="#" class="d-flex py-2 px-3 justify-content-center align-items-center">فراموش کردید؟</a>
+                        <input class="p-2 text-end" type="email" name="" id="" placeholder="ایمیل یا موبایل یا کاربری"
+                            required>
+                    </div>
+                    <button class="btn d-block d-md-inline-block py-2 mt-2 m-md-0">ورود</button>
+                </div>
+            </form>
+        </section>
+        <div class="contact gap-1">
+            <div class="d-flex justify-content-between px-4 py-2 w-25 button">
+                <svg xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+                <span>پشتیبانی</span>
+            </div>
+            <div class="slider-show text-end px-4 py-2">
+                <a href="#" class="d-block py-2"><span>payment@filimo.com </span>: ایمیل</a>
+                <a href="#" class="d-block py-2">شماره تلفن : <span>(021) 74524</span></a>
+                <a href="#" class="d-block py-2"><span>پرسش های متداول</span></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <script src="page-filme.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="fixed-top">
+        <div class="yellow-div"></div>
+        <div class="d-md-flex justify-content-md-between m-auto align-items-md-center px-md-2">
+            <div class="d-flex justify-content-between justify-content-center align-items-center p-2">
+                <div>
+                    <a class="btn text-white bg-secondary px-3 py-2" href="Account.html">ورود</a>
+                    <button class="btn text-white d-md-none">خرید اشتراک</button>
+                    <button class="btn text-white d-none d-md-inline-block">خرید اشتراک فیلیمو</button>
+                    <div class="d-md-none d-inline-block search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="d-md-none ">
+                    <img src="images/fa-filimo-dark-logo.png" alt="">
+                </div>
+            </div>
+            <!-- Navbar-nav -->
+            <div class="Navbar-nav d-flex justify-content-around position-relative gap-md-2 px-2">
+                <a class="p-2 d-none d-md-block search-button-2" href="#">جستجو</a>
+                <a class="p-2" href="#">فیلیمومدرسه</a>
+                <a class="p-2" href="#">کودک</a>
+                <!-- Dropdown-nav 1 -->
+                <div class="position-relative drop-button-desktop ">
+                    <a class="p-2 d-flex flex-row-reverse gap-1 dropdown-button" href="#">مجموعه‌ها
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                        </svg>
+                    </a>
+                    <div class="position-absolute justify-content-between drop-menu-desktop p-3 ">
+                        <div class="d-flex flex-column text-end w-50">
+                            <a class="py-2" href="#">اسکار 2022</a>
+                            <a class="py-2" href="#">250 فیلم برتر IMDB</a>
+                            <a class="py-2" href="#">پر‌فروش‌ترین‌های سینمای ایران</a>
+                            <a class="py-2" href="#">پیشکش</a>
+                            <a class="py-2" href="#">همه لیست‌ها</a>
+                        </div>
+                        <div class="d-flex flex-column text-end w-50">
+                            <a class="py-2" href="#">آموزش زبان انگلیسی</a>
+                            <a class="py-2" href="#">مخصوص ناشنوایان</a>
+                            <a class="py-2" href="#">مخصوص نابینایان</a>
+                            <a class="py-2" href="#">جشواره فجر</a>
+                            <a class="py-2" href="#">خلاصه فوتبال</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="p-2" href="#">ایرانی</a>
+                <!-- Dropdown-nav 2 -->
+                <div class="position-relative drop-button-desktop-2 ">
+                    <a class="p-2 d-flex flex-row-reverse gap-1" href="#">سریال
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 d-none d-sm-block" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                        </svg>
+                    </a>
+                    <div class="position-absolute justify-content-between drop-menu-desktop-2 p-3 ">
+                        <div class="d-flex flex-column text-end w-50">
+                            <a class="py-2" href="#">تاریخی | مذهبی</a>
+                            <a class="py-2" href="#">خانوادگی</a>
+                            <a class="py-2" href="#">کمدی</a>
+                            <a class="py-2" href="#">فیلم تئاتر</a>
+                            <a class="py-2" href="#">وحشت</a>
+                            <a class="py-2" href="#">فیلم کوتاه</a>
+                        </div>
+                        <div class="d-flex flex-column text-end w-50">
+                            <a class="py-2" href="#">اکشن</a>
+                            <a class="py-2" href="#">عاشقانه</a>
+                            <a class="py-2" href="#">مستند</a>
+                            <a class="py-2" href="#">انیمیشن</a>
+                            <a class="py-2" href="#">علمی تخیلی</a>
+                            <a class="py-2" href="#">تاک شو</a>
+                            <a class="py-2" href="#">کنسرت</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dropdown-nav 3 -->
+                <div class="position-relative drop-button-desktop-3 ">
+                    <a class="p-2 d-flex flex-row-reverse gap-1 " href="#">فیلم
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 d-none d-sm-block" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                        </svg>
+                    </a>
+                    <div class="position-absolute justify-content-between drop-menu-desktop-3 p-3 ">
+                        <div class="d-flex flex-column text-end w-50">
+                            <a class="py-2" href="#">تاریخی | مذهبی</a>
+                            <a class="py-2" href="#">خانوادگی</a>
+                            <a class="py-2" href="#">کمدی</a>
+                            <a class="py-2" href="#">فیلم تئاتر</a>
+                            <a class="py-2" href="#">وحشت</a>
+                            <a class="py-2" href="#">فیلم کوتاه</a>
+                        </div>
+                        <div class="d-flex flex-column text-end w-50">
+                            <a class="py-2" href="#">اکشن</a>
+                            <a class="py-2" href="#">عاشقانه</a>
+                            <a class="py-2" href="#">مستند</a>
+                            <a class="py-2" href="#">انیمیشن</a>
+                            <a class="py-2" href="#">علمی تخیلی</a>
+                            <a class="py-2" href="#">تاک شو</a>
+                            <a class="py-2" href="#">کنسرت</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-md-flex justify-content-md-center align-items-md-center logo">
+                    <img src="images/fa-filimo-dark-logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dropdown Menu Mobile-->
+    <div class="dropdownMenu">
+        <div class="dropmenu d-flex justify-content-center align-items-center">
+            <div class="position-absolute p-1 close">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <div class="d-flex flex-column text-center w-100 ">
+                <a class="d-block w-100 p-2" href="#">آموزش زبان انگلیسی</a>
+                <a class="d-block w-100 p-2" href="#">اسکار 2022</a>
+                <a class="d-block w-100 p-2" href="#">مخصوص ناشنوایان</a>
+                <a class="d-block w-100 p-2" href="#">250 فیلم برتر IMDB</a>
+                <a class="d-block w-100 p-2" href="#">مخصوص نابینایان</a>
+                <a class="d-block w-100 p-2" href="#">پرفروش ترین های سینمای ایران</a>
+                <a class="d-block w-100 p-2" href="#">جشواره فجر</a>
+                <a class="d-block w-100 p-2" href="#">پیشکش</a>
+                <a class="d-block w-100 p-2" href="#">خلاصه فوتبال</a>
+                <a class="d-block w-100 p-2" href="#">همه لیست</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search-Box -->
+    <div class="search-box position-fixed">
+        <div class="mt-5 d-flex flex-column align-items-center px-2 p-md-5">
+            <div class="d-flex justify-content-end w-100 ">
+                <button class="btn close-search-box">بستن</button>
+                <input class="text-end p-2 rounded-3 w-100" type="text" placeholder="جستجو فیلم، بازیگر، کارگردان">
+            </div>
+            <div class="p-3 text-end mt-5 w-100">
+                <p>تاریخچیه جستجو</p>
+                <p>لیست تاریخچیه جستجوی شما خالیست!</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Header -->
+    <div class="header gap-4">
+        <div
+            class="flex-lg-row-reverse px-md-5 justify-content-end justify-content-lg-start align-items-center mb-4 mb-lg-0 main">
+            <div class="img rounded-3 overflow-hidden position-relative"><img
+                    src="https://static.cdn.asset.filimo.com/flmt/mov_114224_32791-m.jpg" alt="" class="d-block w-100">
+                <div class="play position-absolute">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+            <div class="mx-lg-5">
+                <div class="d-flex flex-column justify-content-center align-items-center align-items-lg-end  mb-2">
+                    <p class="text-secondary mt-4 mb-lg-3">جوکر / قسمت چهارم</p>
+                    <p class="text-white mb-lg-1">سریال جوکر - فصل 5 قسمت 4</p>
+                    <p class="text-white">Joker S05E04</p>
+                    <div class="point px-3 pt-1">
+                        <small>(7،750)</small>
+                        <small>98%</small>
+                    </div>
+                </div>
+                <div
+                    class="for-parents d-flex flex-column justify-content-center align-items-lg-end align-items-center mt-lg-5">
+                    <p>راهنمایی والدین برای انتخابی دقیق تر ، <a href="#">در کدومو بخوانید</a></p>
+                    <div class="text-white px-3 py-1 mt-lg-2 mb-lg-4">دوشنبه ها ، ساعت 8 صبح</div>
+                    <p class="d-none d-lg-block text-white">کارگردان : احسان علیخانی - سیدحامد میرفتاحی</p>
+                    <p class="d-none d-lg-block text-white">یک ساعت و 34 دقیقه - محصول ایران - 1400 - کیفیت HD</p>
+                    <div class="d-flex d-none text-white d-lg-flex justify-content-between align-items-center gap-3">
+                        <div class="d-flex justify-content-center align-items-center px-3 py-1">خانوادگی</div>
+                        <div class="d-flex justify-content-center align-items-center px-3 py-1">کمدی</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="box d-flex flex-column flex-lg-row-reverse text-white justify-content-center justify-content-lg-between align-items-center">
+            <div class=" d-flex gap-4 gap-md-3 justify-content-between justify-content-lg-center">
+                <a href="#" class="d-none d-md-block p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
+                    </svg>
+                </a>
+                <a href="#" class="d-none d-md-block p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                    </svg>
+                </a>
+                <a href="#" class="d-md-none d-flex flex-column-reverse justify-content-center align-items-center ">
+                    <span>نظردهی</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                    </svg>
+                </a>
+                <a href="#"
+                    class=" px-md-3 flex-md-row d-flex gap-md-2 flex-column-reverse justify-content-center align-items-center ">
+                    <span>دانلود</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                    </svg>
+                </a>
+                <a href="#"
+                    class=" px-md-3 py-md-2 flex-md-row d-flex gap-md-2 flex-column-reverse justify-content-center align-items-center ">
+                    <span>نشان کردن</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="d-flex justify-content-center align-items-center"><button class="btn mt-4">ورود و تماشا</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <main class="mb-lg-4 p-3 d-flex flex-column flex-md-row-reverse m-auto mt-4">
+        <div class="img">
+            <img class="d-block w-100" src="https://static.cdn.asset.aparat.com/avt/42737502-7138__4438.jpg" alt="">
+        </div>
+        <div
+            class="text-white gap-3 py-3 py-md-0 mx-md-3 text-end d-flex flex-column justify-content-start align-items-center">
+            <div>
+                <h5>داستان سریال جوکر - فصل 5 قسمت 4</h5>
+                <p class="text-secondary">در این قسمت از سریال محمدرضا علیمردانی، امیرحسین صدیق، حامد آهنگی، سیروس
+                    میمنت، علی اوجی، مجید واشقانی، علی مشهدی و مهران غفوریان به هنرمندی پرداخته اند.</p>
+            </div>
+            <div>
+                <h5>درباره سریال جوکر - فصل 5 قسمت 4</h5>
+                <p class="text-secondary">سریال جوکر به کارگردانی <a class="text-white-50" href="#">احسان علیخانی</a> و
+                    <a class="text-white-50" href="#">سیدحامد میرفتاحی</a> در سال 1400 ساخته شده است. این سریال محصول
+                    کشور ایران و در ژانر <a class="text-white-50" href="#">کمدی</a> و <a class="text-white-50"
+                        href="#">خانوادگی</a> می‌باشد. .
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Tabs -->
+    <div class="tab mb-5 px-3">
+        <div class="header-tab text-white d-flex justify-content-center">
+            <div class="py-2 d-flex justify-content-center button-tab" data="0">فصل پنجم</div>
+            <div class="py-2 d-flex justify-content-center button-tab" data="1">فصل چهارم</div>
+            <div class="py-2 d-flex justify-content-center button-tab" data="2">فصل سوم</div>
+            <div class="py-2 d-flex justify-content-center button-tab" data="3">فصل دوم</div>
+            <div class="py-2 d-flex justify-content-center button-tab" data="4">فصل اول</div>
+        </div>
+        <div class="serial">
+            <div class="tabs flex-column justify-content-center align-items-center">
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 5 قسمت 1</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%97.8</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 5 قسمت 2</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%95.4</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 5 قسمت 3</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%96.2</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 5 قسمت 4</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%97.6</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs flex-column justify-content-center align-items-center">
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 4 قسمت 1</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%97.6</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 4 قسمت 2</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%96.2</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 4 قسمت 3</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%94.2</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 4 قسمت 4</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%96.8</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs flex-column justify-content-center align-items-center">
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 3 قسمت 1</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%87.6</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 3 قسمت 2</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%81.6</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 3 قسمت 3</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%75.2</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 3 قسمت 4</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%81.4</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs flex-column justify-content-center align-items-center">
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 2 قسمت 1</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%96.8</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 2 قسمت 2</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%96.2</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 2 قسمت 3</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%97.6</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 2 قسمت 4</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%96</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs flex-column justify-content-center align-items-center">
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play play-green" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5 py-1">
+                        <div>
+                            <span>فصل 1 قسمت 1</span>
+                            <span class="free-span">رایگان</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%97.4</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 1 قسمت 2</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%96.6</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 1 قسمت 3</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%93.2</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom d-flex justify-content-between align-items-center py-1 px-4 w-100">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 play" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="season d-flex flex-column flex-sm-row-reverse justify-content-sm-between gap-sm-5">
+                        <div class="">
+                            <span>فصل 1 قسمت 4</span>
+                        </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <span>%91.2</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 like" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Filme -->
+    <div class="lists free-whatching max-width-2 mb-md-4">
+        <div class="breadcrumb px-3 py-3 max-width-2 ">
+            <div>
+                <span class="view-all">مشاهده همه </span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </div>
+            <span>فیلم های پیشنهادی</span>
+        </div>
+        <div class="d-flex gap-2 px-4 py-3 h-200 max-width justify-content-between">
+            <div class="position-relative filme-1">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_2609_1-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">93%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>انیمیشن - کمدی</div>
+                        <div>2016 - آمریکا - دوبله شده</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100 " href="#">زوتوپیا</a>
+            </div>
+            <div class="position-relative filme-2">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_90600_396-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">97%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>اکشن - ماجراجویی</div>
+                        <div>2021 - آمریکا - دوبله شده </div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">جنگ فردا</a>
+            </div>
+            <div class="position-relative filme-3">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_13517_1-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">93%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>اکشن - پلیسی معمایی </div>
+                        <div>2007 - فرانسه - دوبله شده</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">هیتمن</a>
+            </div>
+            <div class="position-relative filme-4 ">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_7970_1-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">95%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>انیمیشن - ماجراجویی</div>
+                        <div>2011 - آمریکا - دوبله شده </div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">رنگو</a>
+            </div>
+            <div class="position-relative filme-5 d-none d-lg-block">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_84199_291-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">93%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>انیمیشن - علمی تخیلی </div>
+                        <div>2011 - آمریکا - استرالیا - دوبله شده</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">مورتال کمبت</a>
+            </div>
+            <div class="position-relative filme-6 d-none d-xl-block">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_1358_1-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">89%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>کمدی - اکشن</div>
+                        <div>1994 - ایتالیا - آلمان - دوبله شده</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">حادثه سازان</a>
+            </div>
+            <div class="position-relative serial-1 d-none d-xxl-block">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_18772_1-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">90%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>خانوادگی - کودک</div>
+                        <div>1397 - ایران</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">هشتک خاله سوسکه - قسمت 1</a>
+            </div>
+            <div class="position-relative serial-2 d-none d-xxl-block">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_27715_1-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">92%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div> انیمیشن - ماجراجویی</div>
+                        <div> 2019 - آمریکا - دوبله شده</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">سریع و خشن مسابقه دهندگان</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Makers -->
+    <div class="makers mb-5 max-width-2">
+        <div class="text-white m-5 px-3 text-end w-100 m-auto">سایر عوامل سریال جوکر</div>
+        <div class="d-flex flex-wrap mt-5 gap-4 justify-content-evenly align-items-start">
+            <div class="d-flex flex-column justify-content-start align-items-center">
+                <p class="text-secondary">کارگردان</p>
+                <a href="#">احسان علیخانی</a>
+                <a href="#">سیدحامد میرفتاحی</a>
+            </div>
+            <div class="d-flex flex-column justify-content-start align-items-center">
+                <p class="text-secondary">نویسنده</p>
+                <a href="#">ایمان قیاسی</a>
+                <a href="#">علی رضا زاده</a>
+                <a href="#">عمادالدین کریمیان</a>
+                <a href="#">مهرداد نعیمی</a>
+                <a href="#">مریم آقایی</a>
+                <a href="#">فاطمه خوش خلق</a>
+            </div>
+            <div class="d-flex  flex-column justify-content-start align-items-center">
+                <p class="text-secondary">دستیار کارگردان</p>
+                <a href="#">امیر طهرانی</a>
+                <a href="#">حامد زحمتکش</a>
+            </div>
+            <div class="d-flex  flex-column justify-content-start align-items-center">
+                <p class="text-secondary">مدیر فیلمبرداری</p>
+                <a href="#">مسعود رجبیان</a>
+            </div>
+            <div class="d-flex  flex-column justify-content-start align-items-center">
+                <p class="text-secondary">مدیر تولید</p>
+                <a href="#">مرتضی محمدی چیرانی</a>
+            </div>
+            <div class="d-flex  flex-column justify-content-start align-items-center">
+                <p class="text-secondary">تدوین گر</p>
+                <a href="#">شانا شهیدی</a>
+                <a href="#">سارا معلم</a>
+                <a href="#">نگار بختیاری</a>
+                <a href="#">کسری شمس</a>
+            </div>
+            <div class="d-flex  flex-column justify-content-start align-items-center">
+                <p class="text-secondary">صداپیشه</p>
+                <a href="#">ژاله صامتی</a>
+                <a href="#">ناصر طهماسب</a>
+            </div>
+            <div class="d-flex  flex-column justify-content-start align-items-center">
+                <p class="text-secondary">خواننده</p>
+                <a href="#">سینا حجازی</a>
+            </div>
+            <div class="d-flex  flex-column justify-content-start align-items-center">
+                <p class="text-secondary">مجری طرح</p>
+                <a href="#">امیرحسین بزرگ زادگان</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail -->
+    <div class="detail max-width-2 mb-5 px-3">
+        <p class="text-white text-end">نقدهای سریال جوکر</p>
+        <div class="d-flex flex-column gap-2">
+            <a href="#" class="text-end">همه چیز درباره مسابقه جوکر ، اینجا بخندی باختی!</a>
+            <p class="text-end text-secondary px-2">شاید با شنیدن اسم مسابقه جوکر این کنجکاوی برایتان پیش بیاید که قرار
+                است در این رئالیتی شو که یک مسابقه هیجان
+                انگیز هم هست چه اتفاقاتی رخ دهد. با شنیدن اسم جوکر همه یاد جوکرهای فیلم های تاریخ سینما می افتیم. شخصیت
+                هایی
+                با ویژگی های منحصربفرد اخلاقی که در جامعه امروز پشت نقاب پر خنده با تصمیمات جدی و گاه خصمانه به کارزار
+                مقابله با جامعه خود می روند. اما جوکر در این مسابقه یک تعریف ساده تر دارد. «هر کسی بخنده باخته!» این
+                خلاصه
+                این مسابقه است که در ادامه درباره ویژگی ها و شرایط آن بیشتر توضیح می دهیم.
+            </p>
+        </div>
+    </div>
+
+    <!-- Leave-Comment -->
+    <div class="leave max-width-2 px-3 mb-5">
+        <div class="selection d-flex flex-wrap flex-row-reverse justify-content-start align-items-center gap-2 mb-3">
+            <span class="text-white">دیدگاه های سریال جوکر</span>
+            <div class="button position-relative d-flex justify-content-center align-items-center">
+                <button class="btn gap-3 d-flex flex-row-reverse justify-content-center align-items-center">
+                    <span>فصل اول - قسمت 1</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="flex-column gap-2 position-absolute p-3 rounded-3">
+                    <p class="text-end">فصل ها</p>
+                    <div class="px-3 py-2 rounded-3">
+                        <div class="d-flex flex-row-reverse justify-content-between align-items-center">
+                            <a href="#">فصل اول</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="px-3 py-2 rounded-3">
+                        <div class="d-flex flex-row-reverse justify-content-between align-items-center">
+                            <a href="#">فصل دوم</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="px-3 py-2 rounded-3">
+                        <div class="d-flex flex-row-reverse justify-content-between align-items-center">
+                            <a href="#">فصل سوم</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="px-3 py-2 rounded-3">
+                        <div class="d-flex flex-row-reverse justify-content-between align-items-center">
+                            <a href="#">فصل چهارم</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="px-3 py-2 rounded-3">
+                        <div class="d-flex flex-row-reverse justify-content-between align-items-center">
+                            <a href="#">فصل پنجم</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="leave-comment  d-flex flex-row-reverse gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="contact" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div class="input-group rounded-3 overflow-hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
+                </svg>
+                <input class="py-1 px-2" type="text" placeholder="این فیلم چطور بود؟">
+            </div>
+        </div>
+    </div>
+
+    <!-- Comments -->
+    <div class="comments max-width-2 px-3 mb-5 d-flex flex-column gap-4">
+        <div class="comment d-flex flex-row-reverse py-2 gap-2 border-top">
+            <div class="div1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="contact" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+            <div class="div2 flex-grow-1 d-flex flex-column text-end gap-1">
+                <div class="d-flex flex-row-reverse justify-content-start gap-3">
+                    <span>hamta</span>
+                    <span class="text-secondary">۷ آذر ۱۴۰۰</span>
+                </div>
+                <p class="mt-3 m-sm-0">عالی بود ، کاش هفته ای دو قسمت میدادید ، امیدوارم 10 فصل درست کنید</p>
+            </div>
+            <div class="div3 position-relative">
+                <button class="btn d-flex position-absolute justify-content-between align-items-center gap-2">
+                    <span>دیدگاه مفید</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="comment d-flex flex-row-reverse py-2 gap-2 border-top">
+            <div class="div1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="contact" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+            <div class="div2 flex-grow-1 d-flex flex-column text-end gap-1">
+                <div class="d-flex flex-row-reverse justify-content-start gap-3">
+                    <span></span>
+                    <span class="text-secondary"> ۶ آذر ۱۴۰۰</span>
+                </div>
+                <p>عالی بود ترکىدم از خنده</p>
+            </div>
+            <div class="div3 position-relative">
+                <button class="btn d-flex position-absolute justify-content-between align-items-center gap-2">
+                    <span>دیدگاه مفید</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="comment d-flex flex-row-reverse py-2 gap-2 border-top">
+            <div class="div1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="contact" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+            <div class="div2 flex-grow-1 d-flex flex-column text-end gap-1">
+                <div class="d-flex flex-row-reverse justify-content-start gap-3">
+                    <span>farsad</span>
+                    <span class="text-secondary">۷ آذر ۱۴۰۰</span>
+                </div>
+                <p>فقط نیکخواه</p>
+            </div>
+            <div class="div3 position-relative">
+                <button class="btn d-flex position-absolute justify-content-between align-items-center gap-2">
+                    <span>دیدگاه مفید</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="p-1 d-flex justify-content-between align-items-center">
+        <div class="position-relative d-flex justify-content-center align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="d-md-none show-more" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+            </svg>
+            <a href="#" class="d-none d-md-block p-0 hover-more">شبکه های اجتماعی
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                </svg>
+            </a>
+            <div class="position-absolute div-hover d-none d-md-block"></div>
+            <div class="position-absolute more-desktop">
+                <a href="#">آپارات</a>
+                <a href="#">تلگرام</a>
+                <a href="#">توییتر</a>
+                <a href="#">اینستاگرام</a>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between gap-md-0 align-items-center">
+            <a class="btn text-white p-0 d-md-none show-more-2">
+                <span>لینک های مفید</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                </svg>
+            </a>
+            <div class="position-relative">
+                <a class="d-none d-md-block hover-more-2" href="#">
+                    <span>سایر لینک ها</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                    </svg>
+                </a>
+                <div class="position-absolute div-hover-2 d-none d-md-block"></div>
+                <div class="position-absolute more-desktop-2">
+                    <a href="#">لوگو</a>
+                    <a href="#">دانلود فیلم و سریال</a>
+                </div>
+            </div>
+            <a class="d-none d-md-block" href="#">تبلیغات در فیلیمو</a>
+            <a class="d-none d-md-block" href="#">به ما بپیوندید</a>
+            <a class="d-none d-md-block" href="#">پرسش های متداول</a>
+            <a class="d-none d-md-block" href="#">قوانین</a>
+            <a class="d-none d-md-block" href="#">تماس با ما</a>
+            <a href="#">اپلیکیشن ها</a>
+            <a href="#">
+                <span>تماشا با تلویزیون</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="scrollup" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+            </svg>
+        </div>
+    </footer>
+    <div class="more">
+        <div>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">آپارات</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">تلگرام</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">توییتر</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">اینستاگرام</a>
+        </div>
+        <div class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+    </div>
+    <div class="more-2">
+        <div>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">تماس با ما</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">قوانین</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">پرسش های متداول</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">به ما بپیوندید</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">تبلیغات در فیلیمو</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">لوگو</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">دانلود فیلم و سریال</a>
+        </div>
+        <div class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

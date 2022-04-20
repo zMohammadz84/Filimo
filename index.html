@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="fixed-top">
+        <div class="yellow-div"></div>
+        <div class="d-md-flex justify-content-md-between m-auto align-items-md-center px-md-2">
+            <div class="d-flex justify-content-between justify-content-center align-items-center p-2">
+                <div>
+                    <a class="btn text-white bg-secondary px-3 py-2" href="Account.html">ورود</a>
+                    <button class="btn text-white d-md-none">خرید اشتراک</button>
+                    <button class="btn text-white d-none d-md-inline-block">خرید اشتراک فیلیمو</button>
+                    <div class="d-md-none d-inline-block search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="d-md-none ">
+                    <img src="images/fa-filimo-dark-logo.png" alt="">
+                </div>
+            </div>
+            <!-- Navbar-nav -->
+            <div class="Navbar-nav d-flex justify-content-around position-relative gap-md-2 px-2">
+                <a class="p-2 d-none d-md-block search-button-2" href="#">جستجو</a>
+                <a class="p-2" href="#">فیلیمومدرسه</a>
+                <a class="p-2" href="#">کودک</a>
+                <!-- Dropdown-nav 1 -->
+                <div class="position-relative drop-button-desktop ">
+                    <a class="p-2 d-flex flex-row-reverse gap-1 dropdown-button" href="#">مجموعه‌ها
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                        </svg>
+                    </a>
+                    <div class="position-absolute justify-content-between drop-menu-desktop p-3 ">
+                        <div class="d-flex flex-column text-end w-50">
+                            <a class="py-2" href="#">اسکار 2022</a>
+                            <a class="py-2" href="#">250 فیلم برتر IMDB</a>
+                            <a class="py-2" href="#">پر‌فروش‌ترین‌های سینمای ایران</a>
+                            <a class="py-2" href="#">پیشکش</a>
+                            <a class="py-2" href="#">همه لیست‌ها</a>
+                        </div>
+                        <div class="d-flex flex-column text-end w-50">
+                            <a class="py-2" href="#">آموزش زبان انگلیسی</a>
+                            <a class="py-2" href="#">مخصوص ناشنوایان</a>
+                            <a class="py-2" href="#">مخصوص نابینایان</a>
+                            <a class="py-2" href="#">جشواره فجر</a>
+                            <a class="py-2" href="#">خلاصه فوتبال</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="p-2" href="#">ایرانی</a>
+                <!-- Dropdown-nav 2 -->
+                <div class="position-relative drop-button-desktop-2 ">
+                    <a class="p-2 d-flex flex-row-reverse gap-1" href="#">سریال
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 d-none d-sm-block" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                        </svg>
+                    </a>
+                    <div class="position-absolute justify-content-between drop-menu-desktop-2 p-3 ">
+                        <div class="d-flex flex-column text-end w-50">
+                            <a class="py-2" href="#">تاریخی | مذهبی</a>
+                            <a class="py-2" href="#">خانوادگی</a>
+                            <a class="py-2" href="#">کمدی</a>
+                            <a class="py-2" href="#">فیلم تئاتر</a>
+                            <a class="py-2" href="#">وحشت</a>
+                            <a class="py-2" href="#">فیلم کوتاه</a>
+                        </div>
+                        <div class="d-flex flex-column text-end w-50">
+                            <a class="py-2" href="#">اکشن</a>
+                            <a class="py-2" href="#">عاشقانه</a>
+                            <a class="py-2" href="#">مستند</a>
+                            <a class="py-2" href="#">انیمیشن</a>
+                            <a class="py-2" href="#">علمی تخیلی</a>
+                            <a class="py-2" href="#">تاک شو</a>
+                            <a class="py-2" href="#">کنسرت</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dropdown-nav 3 -->
+                <div class="position-relative drop-button-desktop-3 ">
+                    <a class="p-2 d-flex flex-row-reverse gap-1 " href="#">فیلم
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 d-none d-sm-block" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                        </svg>
+                    </a>
+                    <div class="position-absolute justify-content-between drop-menu-desktop-3 p-3 ">
+                        <div class="d-flex flex-column text-end w-50">
+                            <a class="py-2" href="#">تاریخی | مذهبی</a>
+                            <a class="py-2" href="#">خانوادگی</a>
+                            <a class="py-2" href="#">کمدی</a>
+                            <a class="py-2" href="#">فیلم تئاتر</a>
+                            <a class="py-2" href="#">وحشت</a>
+                            <a class="py-2" href="#">فیلم کوتاه</a>
+                        </div>
+                        <div class="d-flex flex-column text-end w-50">
+                            <a class="py-2" href="#">اکشن</a>
+                            <a class="py-2" href="#">عاشقانه</a>
+                            <a class="py-2" href="#">مستند</a>
+                            <a class="py-2" href="#">انیمیشن</a>
+                            <a class="py-2" href="#">علمی تخیلی</a>
+                            <a class="py-2" href="#">تاک شو</a>
+                            <a class="py-2" href="#">کنسرت</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-md-flex justify-content-md-center align-items-md-center logo">
+                    <img src="images/fa-filimo-dark-logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dropdown Menu Mobile-->
+    <div class="dropdownMenu">
+        <div class="dropmenu d-flex justify-content-center align-items-center">
+            <div class="position-absolute p-1 close">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <div class="d-flex flex-column text-center w-100 ">
+                <a class="d-block w-100 p-2" href="#">آموزش زبان انگلیسی</a>
+                <a class="d-block w-100 p-2" href="#">اسکار 2022</a>
+                <a class="d-block w-100 p-2" href="#">مخصوص ناشنوایان</a>
+                <a class="d-block w-100 p-2" href="#">250 فیلم برتر IMDB</a>
+                <a class="d-block w-100 p-2" href="#">مخصوص نابینایان</a>
+                <a class="d-block w-100 p-2" href="#">پرفروش ترین های سینمای ایران</a>
+                <a class="d-block w-100 p-2" href="#">جشواره فجر</a>
+                <a class="d-block w-100 p-2" href="#">پیشکش</a>
+                <a class="d-block w-100 p-2" href="#">خلاصه فوتبال</a>
+                <a class="d-block w-100 p-2" href="#">همه لیست</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search-Box -->
+    <div class="search-box position-fixed">
+        <div class="mt-5 d-flex flex-column align-items-center px-2 p-md-5">
+            <div class="d-flex justify-content-end w-100 ">
+                <button class="btn close-search-box">بستن</button>
+                <input class="text-end p-2 rounded-3 w-100" type="text" placeholder="جستجو فیلم، بازیگر، کارگردان">
+            </div>
+            <div class="p-3 text-end mt-5 w-100">
+                <p>تاریخچیه جستجو</p>
+                <p>لیست تاریخچیه جستجوی شما خالیست!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider-Header -->
+    <section class="owl-carousel owl-theme position-relative">
+        <div class="position-relative img-1">
+            <img class="d-block w-100"
+                src="https://www.filimo.com/public/public/filemanager/homeslider/wqklz_mobile_1_v1.jpg?6" alt="">
+            <div class="float-div p-2 d-flex flex-column justify-content-center align-items-end">
+                <div class="bg-white rounded-pill text-dark px-3 py-1 mb-3">جمعه، ساعت 8 صبح
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <p class="text-white">قسمت هشتم سریال جیران</p>
+                <button class="btn bg-white">اطلاعات بیشتر
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="position-relative img-2">
+            <img class="d-block w-100"
+                src="https://www.filimo.com/public/public/filemanager/homeslider/0v9if_mobile_1_v1.jpg?6" alt="">
+            <div class="float-div p-2 d-flex flex-column justify-content-center align-items-end">
+                <p>عشق و خیانت <span class="rounded-pill  px-2">اکران آنلاین</span></p>
+                <button class="btn bg-white">ورود به سینمای آنلاین</button>
+            </div>
+        </div>
+        <div class="position-relative img-3">
+            <img class="d-block w-100"
+                src="https://www.filimo.com/public/public/filemanager/homeslider/0lcx2_mobile_1_v1.jpg?6" alt="">
+            <div class=" float-div p-2 d-flex flex-column justify-content-center align-items-end">
+                <p>هر توانایی میتونه یه موهبت باشه... یا یک نفرین</p>
+                <button class="btn bg-white">اطلاعات بیشتر
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+        <div class="position-relative img-4">
+            <img class="d-block w-100"
+                src="https://www.filimo.com/public/public/filemanager/homeslider/esfand_mobile_1_v8.jpg?6" alt="">
+        </div>
+        <div class="position-relative img-5">
+            <img class="d-block w-100"
+                src="https://www.filimo.com/public/public/filemanager/homeslider/tbmar_mobile_1_v1.jpg?6" alt="">
+            <div class=" float-div p-2 d-flex flex-column justify-content-center align-items-end">
+                <p>اختصاصی <span class="text-warning">فیلیمو</span></p>
+                <p>کمدی جذاب ساخت ایران</p>
+                <div>
+                    <button class="btn text-white">6 ساعت دیگر</button>
+                    <button class="btn bg-white">اطلاعات بیشتر
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter-Button -->
+    <div class="btn-filter p-2 py-3 d-md-none">
+        <button class="w-100 btn">
+            فیلتر
+            <svg xmlns="http://www.w3.org/2000/svg" class="" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Filter-Bar -->
+    <div class="filter-bar d-md-flex flex-row-reverse justify-content-around d-md-none">
+        <div class="d-md-flex flex-row-reverse justify-content-around gap-3">
+            <div class="select-1 d-flex justify-content-between position-relative" data="1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+                <span>فیلم و سریال</span>
+            </div>
+            <div class="select-1 d-flex justify-content-between position-relative my-3 my-md-0" data="2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+                <span>ژانر</span>
+            </div>
+            <div class="select-1 d-flex justify-content-between position-relative" data="3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+                <span>کشور</span>
+            </div>
+            <div class="select-1 d-flex justify-content-between position-relative my-3 my-md-0" data="4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+                <span>زبان</span>
+            </div>
+            <div class="select-1 d-flex justify-content-between position-relative" data="5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+                <span>سن</span>
+            </div>
+            <div class="select-hd d-flex checkbox justify-content-between position-relative my-3 my-md-0">
+                <input type="checkbox">
+                HD
+            </div>
+            <button class="btn apply-filter-button">اعمال فیلتر</button>
+        </div>
+    </div>
+
+    <!-- page of Filter-Bar -->
+    <div class="page-of-filter-bar">
+        <div class="position-absolute p-1 close-filter-page">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center h-100">
+            <a class="w-100 d-flex justify-content-center py-2" href="#">همه</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">فیلم</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">سریال</a>
+        </div>
+    </div>
+    <div class="page-of-filter-bar">
+        <div class="position-absolute p-1 close-filter-page">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center h-100">
+            <a class="w-100 d-flex justify-content-center py-2" href="#">همه</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">اکشن</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">تاریخی | مذهبی</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">عاشقانه</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">خانوادگی</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">مستند</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">کمدی</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">انیمیشن</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">فیلم تئاتر</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">علمی تخیلی</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">وحشت</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">تاک شو</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">فیلم کوتاه</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">دوبله ترکی</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">کنسرت</a>
+        </div>
+    </div>
+    <div class="page-of-filter-bar">
+        <div class="position-absolute p-1 close-filter-page">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center h-100">
+            <a class="w-100 d-flex justify-content-center py-2" href="#">همه</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">ایران</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">آمریکا</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">ژاپن</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">انگلیس</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">کره جنوبی</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">ترکیه</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">فرانسه</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">هند</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">کانادا</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">آلمان</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">اسپانیا</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">چین</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">ایتالیا</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">خارجی</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">دیگر کشورها</a>
+        </div>
+    </div>
+    <div class="page-of-filter-bar">
+        <div class="position-absolute p-1 close-filter-page">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center h-100">
+            <a class="w-100 d-flex justify-content-center py-2" href="#">همه</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">فارسی (دوبله)</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">زبان اصلی (زیر نویس)</a>
+        </div>
+    </div>
+    <div class="page-of-filter-bar">
+        <div class="position-absolute p-1 close-filter-page">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center h-100">
+            <a class="w-100 d-flex justify-content-center py-2" href="#">همه</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">زیر 3 سال</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">تا 6 سال</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">تا 12 سال</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">تا 15 سال</a>
+            <a class="w-100 d-flex justify-content-center py-2" href="#">تا 18 سال</a>
+        </div>
+    </div>
+
+    <!-- Special List -->
+    <div class="special-list">
+        <div class="breadcrumb px-4 py-3 max-width">
+            <div>
+                <span class="view-all">مشاهده همه </span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </div>
+            <span class="">ویژه</span>
+        </div>
+        <div class="row px-3 gap-2">
+            <div class="d-flex flex-column gap-3 col ">
+                <div class="img">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_113315_31654-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">97%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>جوکر - فصل 5 قسمت 3</div>
+                        <div>1400 - کمدی - خانوادگی</div>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_113316_31434-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">93%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>شب های مافیا 4 - فصل 1 قسمت 3</div>
+                        <div>1400 - خانوادگی - اجتماعی</div>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_113196_31428-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">95%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>ساخت -قسمت 5</div>
+                        <div>1400 - کمدی - خانوادگی</div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-sm-flex flex-column gap-3 d-none col">
+                <div class="img">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_113174_31404-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">96%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>جیران - فصل 1 قسمت 8 </div>
+                        <div>1400 - عاشقانه - خانوادگی</div>
+                    </div>
+                </div>
+                <div class="position-relative rounded-3 overflow-hidden cursor">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_110232_32012-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">98%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>پیکی بلایندرز - فصل 6 قسمت 6</div>
+                        <div>2022 - اکشن - گانگستری</div>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_113231_31436-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">97%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>نیمه شب با امیرحسین قیاسی - فصل 1 قسمت 18</div>
+                        <div>1400 - خانوادگی - اجتماعی</div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-md-flex flex-column gap-3 d-none col">
+                <div class="position-relative rounded-3 overflow-hidden cursor">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_111461_31389-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="free">رایگان</div>
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">97%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>شوالیه ماه - فصل 1 قسمت 1</div>
+                        <div>2022 - اکشن - ماجراجویی</div>
+                    </div>
+                </div>
+                <div class="position-relative rounded-3 overflow-hidden cursor">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_113317_31402-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="online">اکران آنلاین</div>
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">78%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>قدغن</div>
+                        <div>1400 - خانوادگی - اجتماعی</div>
+                    </div>
+                </div>
+                <div class="position-relative rounded-3 overflow-hidden cursor">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_30549_31426-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="online">اکران آنلاین</div>
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">73%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>تومان</div>
+                        <div>1397 - خانوادگی - اجتماعی</div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-lg-flex flex-column gap-3 d-none col">
+                <div class="img">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_113299_31352-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">87%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>پرویزخان</div>
+                        <div>1400 - مستند - ورزشی</div>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_111784_31227-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">65%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>دشت خاموش</div>
+                        <div>1398 - خانوادگی - اجتماعی</div>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_17691_31178-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">89%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>خاک آشنا</div>
+                        <div>1388 - خانوادگی - اجتماعی</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-xl-flex flex-column gap-3 d-none col">
+                <div class="position-relative rounded-3 overflow-hidden">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_113179_31112-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">90%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>شهر گربه ها</div>
+                        <div>1398 - خانوادگی - کودک</div>
+                    </div>
+                </div>
+                <div class="position-relative rounded-3 overflow-hidden">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_110582_29382-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">88%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>شهر اسلحه</div>
+                        <div>2018 - اکشن - هیجان انگیز</div>
+                    </div>
+                </div>
+                <div class="position-relative rounded-3 overflow-hidden">
+                    <img src="https://static.cdn.asset.filimo.com/flmt/mov_111483_31387-m.jpg" alt=""
+                        class="d-block w-100 img-fluid">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">90%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>دختری از پلینویل - فصل 1 قسمت 1</div>
+                        <div>2022 - خانوادگی - اجتماعی</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-4 py-3 max-width">
+            <div class="breadcrumb d-flex justify-content-end gap-2">
+                <span class="view-all"> نمایش همه فیلم های ویژه امروز</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Filmes -->
+    <div class="lists new-filmes">
+        <div class="breadcrumb px-4 py-3 max-width">
+            <div>
+                <span class="view-all">مشاهده همه </span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </div>
+            <span>تازه های فیلیمو</span>
+        </div>
+        <div class="d-flex gap-2 px-4 py-3 h-200 max-width justify-content-between">
+            <div class="position-relative serial-1">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_112460_30266-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">87%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>انیمیشن - ماجراجویی</div>
+                        <div>2022 - ژاپن - دوبله شده</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100 " href="#">بچه های در مدار</a>
+            </div>
+            <div class="position-relative serial-2">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_111327_28805-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">84%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>خانوادگی - اجتماعی</div>
+                        <div>2022 - آمریکا - زیرنویس دارد</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">ترک تحصیل</a>
+            </div>
+            <div class="position-relative filme-1">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_111378_28900-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">65%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>اکشن - هیجان انگیز</div>
+                        <div>2021 - انگلیس - زیرنویس دارد</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">بربرها</a>
+            </div>
+            <div class="position-relative serial-3">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_111501_29025-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">84%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>اکشن - هیجان انگیز</div>
+                        <div>2022 - کره جنوبی</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">فردا</a>
+            </div>
+            <div class="position-relative filme-2 d-md-none d-lg-block">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_113532_31662-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">79%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>انیمیشن - ماجراجویی </div>
+                        <div>2022 - آمریکا - زیرنویس دارد</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">آپولو 10 : دوران کودکی فضایی</a>
+            </div>
+            <div class="position-relative serial-4 d-md-none d-xl-block">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_111422_29002-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">96%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>علمی تخیلی</div>
+                        <div>2022 - آمرگ - چند زبانه</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">هیلو</a>
+            </div>
+            <div class="position-relative serial-5 d-md-none  d-xxl-block">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_112958_30780-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">77%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>خانوادگی - اجتماعی</div>
+                        <div>2022 - آمریکا - زیرنویس دارد</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">سقوط کردیم</a>
+            </div>
+            <div class="position-relative serial-6 d-md-none  d-xxl-block">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_113803_31971-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">84%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>تاک شو - هاردتاک</div>
+                        <div>2022 - آمریکا</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">هنری پس از مرگ با تایلر هنری</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Free Whatching -->
+    <div class="lists free-whatching">
+        <div class="breadcrumb px-4 py-3 max-width">
+            <div>
+                <span class="view-all">مشاهده همه </span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </div>
+            <span>تماشای رایگان</span>
+        </div>
+        <div class="d-flex gap-2 px-4 py-3 h-200 max-width justify-content-between">
+            <div class="position-relative filme-1">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_2609_1-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">93%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>انیمیشن - کمدی</div>
+                        <div>2016 - آمریکا - دوبله شده</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100 " href="#">زوتوپیا</a>
+            </div>
+            <div class="position-relative filme-2">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_90600_396-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">97%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>اکشن - ماجراجویی</div>
+                        <div>2021 - آمریکا - دوبله شده </div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">جنگ فردا</a>
+            </div>
+            <div class="position-relative filme-3">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_13517_1-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">93%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>اکشن - پلیسی معمایی </div>
+                        <div>2007 - فرانسه - دوبله شده</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">هیتمن</a>
+            </div>
+            <div class="position-relative filme-4 ">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_7970_1-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">95%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>انیمیشن - ماجراجویی</div>
+                        <div>2011 - آمریکا - دوبله شده </div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">رنگو</a>
+            </div>
+            <div class="position-relative filme-5 d-none d-lg-block">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_84199_291-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">93%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>انیمیشن - علمی تخیلی </div>
+                        <div>2011 - آمریکا - استرالیا - دوبله شده</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">مورتال کمبت</a>
+            </div>
+            <div class="position-relative filme-6 d-none d-xl-block">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_1358_1-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">89%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>کمدی - اکشن</div>
+                        <div>1994 - ایتالیا - آلمان - دوبله شده</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">حادثه سازان</a>
+            </div>
+            <div class="position-relative serial-1 d-none d-xxl-block">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_18772_1-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">90%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>خانوادگی - کودک</div>
+                        <div>1397 - ایران</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">هشتک خاله سوسکه - قسمت 1</a>
+            </div>
+            <div class="position-relative serial-2 d-none d-xxl-block">
+                <div class="image position-relative"><img
+                        src="https://static.cdn.asset.filimo.com/flmt/mov_27715_1-m.jpg" alt=""
+                        class="d-block w-100 img-fluid rounded-3">
+                    <div class="before-imgs">
+                        <div>
+                            <span class="pt-1">92%</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div> انیمیشن - ماجراجویی</div>
+                        <div> 2019 - آمریکا - دوبله شده</div>
+                    </div>
+                </div>
+                <a class="text-end py-3 position-absolute text-white w-100" href="#">سریع و خشن مسابقه دهندگان</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Online Screen -->
+    <div class="online-screen lists">
+        <div class="breadcrumb px-4 py-3 max-width">
+            <div>
+                <span class="view-all">مشاهده همه </span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </div>
+            <span>اکران آنلاین</span>
+        </div>
+        <div class="d-flex gap-2 px-4 py-3 max-width justify-content-between">
+            <div class="position-relative filme-1">
+                <img src="https://static.cdn.asset.filimo.com/flmt/mov_30549_31426-m.jpg" alt=""
+                    class="d-block w-100 img-fluid rounded-3">
+                <div class="online">اکران آنلاین</div>
+                <div class="before-imgs">
+                    <div>
+                        <span class="pt-1">73%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>تومان</div>
+                    <div>1397 - خانوادگی - اجتماعی </div>
+                </div>
+            </div>
+            <div class="position-relative filme-2 d-none d-sm-block">
+                <img src="https://static.cdn.asset.filimo.com/flmt/mov_113317_31402-m.jpg" alt=""
+                    class="d-block w-100 img-fluid rounded-3">
+                <div class="online">اکران آنلاین</div>
+                <div class="before-imgs">
+                    <div>
+                        <span class="pt-1">78%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>قدغن</div>
+                    <div>1400 - خانوادگی - اجتماعی </div>
+                </div>
+            </div>
+            <div class="position-relative filme-3 d-none d-md-block">
+                <img src="https://static.cdn.asset.filimo.com/flmt/mov_111784_31227-m.jpg" alt=""
+                    class="d-block w-100 img-fluid rounded-3">
+                <div class="online">اکران آنلاین</div>
+                <div class="before-imgs">
+                    <div>
+                        <span class="pt-1">65%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>دشت خاموش</div>
+                    <div>1398 - خانوادگی - اجتماعی</div>
+                </div>
+            </div>
+            <div class="position-relative filme-4 d-none d-lg-block ">
+                <img src="https://static.cdn.asset.filimo.com/flmt/mov_113179_31112-m.jpg" alt=""
+                    class="d-block w-100 img-fluid rounded-3">
+                <div class="online">اکران آنلاین</div>
+                <div class="before-imgs">
+                    <div>
+                        <span class="pt-1">90%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>شهر گربه ها</div>
+                    <div>1398 - خانوادگی - کودک </div>
+                </div>
+            </div>
+            <div class="position-relative filme-5 d-none d-xl-block ">
+                <img src="https://static.cdn.asset.filimo.com/flmt/mov_111423_30997-m.jpg" alt=""
+                    class="d-block w-100 img-fluid rounded-3">
+                <div class="online">اکران آنلاین</div>
+                <div class="before-imgs">
+                    <div>
+                        <span class="pt-1">91%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>دینامیت</div>
+                    <div>1400 - کمدی - خانوادگی </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Special Serials -->
+    <div class="online-screen lists mb-5">
+        <div class="breadcrumb px-4 py-3 max-width">
+            <div>
+                <span class="view-all">مشاهده همه </span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </div>
+            <span>سریال های اختصاصی فیلیمو</span>
+        </div>
+        <div class="d-flex gap-2 px-4 py-3 max-width justify-content-between">
+            <div class="position-relative filme-1">
+                <img src="https://static.cdn.asset.filimo.com/flmt/mov_85469_26542-m.jpg" alt=""
+                    class="d-block w-100 img-fluid rounded-3">
+                <div class="free">رایگان</div>
+                <div class="before-imgs">
+                    <div>
+                        <span class="pt-1">94%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>جیران - فصل 1 - قسمت 1</div>
+                    <div>1400 - عاشقانه - خانوادگی </div>
+                </div>
+            </div>
+            <div class="position-relative filme-2 d-none d-sm-block">
+                <img src="https://static.cdn.asset.filimo.com/flmt/mov_111308_31046-m.jpg" alt=""
+                    class="d-block w-100 img-fluid rounded-3">
+                <div class="free">رایگان</div>
+                <div class="before-imgs">
+                    <div>
+                        <span class="pt-1">95%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>شب های مافیا - فصل 1 - قسمت 1</div>
+                    <div>1400 - خانوادگی - اجتماعی </div>
+                </div>
+            </div>
+            <div class="position-relative filme-3 d-none d-md-block">
+                <img src="https://static.cdn.asset.filimo.com/flmt/mov_95252_30007-m.jpg" alt=""
+                    class="d-block w-100 img-fluid rounded-3">
+                <div class="free">رایگان</div>
+                <div class="before-imgs">
+                    <div>
+                        <span class="pt-1">90%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>ساخت ایران 3 - قسمت 1</div>
+                    <div>1400 - کمدی - خانوادگی</div>
+                </div>
+            </div>
+            <div class="position-relative filme-4 d-none d-lg-block ">
+                <img src="https://static.cdn.asset.filimo.com/flmt/mov_94072_26958-m.jpg" alt=""
+                    class="d-block w-100 img-fluid rounded-3">
+                <div class="free">در حال ساخت</div>
+                <div class="before-imgs">
+                    <div class="d-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>یاغی - فصل 1 قسمت 1</div>
+                    <div>1400 - خانوادگی - اجتماعی </div>
+                </div>
+            </div>
+            <div class="position-relative filme-5 d-none d-xl-block ">
+                <img src="https://static.cdn.asset.filimo.com/flmt/mov_101724_26533-m.jpg" alt=""
+                    class="d-block w-100 img-fluid rounded-3">
+                <div class="free">در حال ساخت</div>
+                <div class="before-imgs">
+                    <div class="d-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>بی گناه - فصل 1 قسمت 1</div>
+                    <div>1400 - خانوادگی - اجتماعی </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="p-1 d-flex justify-content-between align-items-center">
+        <div class="position-relative d-flex justify-content-center align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="d-md-none show-more" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+            </svg>
+            <a href="#" class="d-none d-md-block p-0 hover-more">شبکه های اجتماعی
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                </svg>
+            </a>
+            <div class="position-absolute div-hover d-none d-md-block"></div>
+            <div class="position-absolute more-desktop">
+                <a href="#">آپارات</a>
+                <a href="#">تلگرام</a>
+                <a href="#">توییتر</a>
+                <a href="#">اینستاگرام</a>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between gap-md-0 align-items-center">
+            <a class="btn text-white p-0 d-md-none show-more-2">
+                <span>لینک های مفید</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                </svg>
+            </a>
+            <div class="position-relative">
+                <a class="d-none d-md-block hover-more-2" href="#">
+                    <span>سایر لینک ها</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                    </svg>
+                </a>
+                <div class="position-absolute div-hover-2 d-none d-md-block"></div>
+                <div class="position-absolute more-desktop-2">
+                    <a href="#">لوگو</a>
+                    <a href="#">دانلود فیلم و سریال</a>
+                </div>
+            </div>
+            <a class="d-none d-md-block" href="#">تبلیغات در فیلیمو</a>
+            <a class="d-none d-md-block" href="#">به ما بپیوندید</a>
+            <a class="d-none d-md-block" href="#">پرسش های متداول</a>
+            <a class="d-none d-md-block" href="#">قوانین</a>
+            <a class="d-none d-md-block" href="#">تماس با ما</a>
+            <a href="#">اپلیکیشن ها</a>
+            <a href="#">
+                <span>تماشا با تلویزیون</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="scrollup" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+            </svg>
+        </div>
+    </footer>
+    <div class="more">
+        <div>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">آپارات</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">تلگرام</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">توییتر</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">اینستاگرام</a>
+        </div>
+        <div class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+    </div>
+    <div class="more-2">
+        <div>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">تماس با ما</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">قوانین</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">پرسش های متداول</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">به ما بپیوندید</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">تبلیغات در فیلیمو</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">لوگو</a>
+            <a class="d-block w-100 py-3 d-flex justify-content-center" href="#">دانلود فیلم و سریال</a>
+        </div>
+        <div class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+    </div>
+
+</body>
+
+</html>
